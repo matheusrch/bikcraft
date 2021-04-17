@@ -1,0 +1,386 @@
+/* Padrão */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.quote-externo {
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.quote-externo p {
+    font-style: italic;
+}
+
+.quote-externo p::before, .quote-externo p::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 14px auto 10px auto;
+    background: white;
+}
+
+.quote-externo cite {
+    font-size: 14px;
+    letter-spacing: .1em;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: .1em;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+
+.subtitulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 8px auto;
+    background: black;
+}
+
+.subtitulo-interno {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: .1em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.subtitulo-interno::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 8px 0;
+    background: black;
+}
+
+.call-to-action {
+    padding-top: 40px;
+    text-align: center;
+    clear: both;
+}
+
+.call-to-action p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.btn {
+    border: 3px solid #fec63e;
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fec63e;
+}
+
+.btn:hover {
+    border-color: white;
+    color: white;
+}
+
+.btn-preto:hover {  /* ou .btn.btn-preto:hover */
+    border-color: black;
+    color: black;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: #fec63e;
+}
+
+.header-menu {
+    text-align: right;
+    /* background: lightblue; por causa do grid-4 vs grid-2 */
+}
+
+.header-menu ul li {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.header-menu ul li a {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .1em;
+    padding: 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header-menu ul li a:hover {
+    color: white;
+}
+
+.header-menu ul li a.menu-ativo {
+    color: white;
+}
+
+/* Intro */
+
+.intro {
+    width: 100%;
+    height: 380px;
+    margin-top: 92px;
+    text-align: center;
+    padding-top: 80px;
+    background: url("../img/bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.intro h1 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Intro interna */
+
+.intro-interna {
+    width: 100%;
+    margin-top: 92px;
+    height: 160px;
+    text-align: center;
+    padding-top: 40px;
+    color: white;
+}
+
+.intro-interna h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.intro-interna h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px auto 10px auto;
+    background: white;
+}
+
+.intro-interna p {
+    font-style: italic;
+}
+
+/* Produtos */
+
+.produtos {
+    padding: 60px 0;
+}
+
+.produtos-lista li {
+    text-align: center;
+    background: #fec63e;
+}
+
+.produtos-lista li h3 {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: .1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.produtos-lista li h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 2px auto;
+    background: black;
+}
+
+.produtos-lista li p {
+    padding: 10px 20px 20px 20px;
+}
+
+.produtos-icone {
+    padding: 20px;
+    background: black;
+}
+
+/* Portfolio */
+
+.portfolio {
+    width: 100%;
+    padding: 60px 0;
+    background: black;
+}
+
+.portfolio .subtitulo {
+    color: #fec63e;
+}
+
+.portfolio .subtitulo::after {
+    background: #fec63e;
+}
+
+.portfolio-lista li:last-child {
+    margin-top: 20px;
+}
+
+.portfolio p {  /* ou .portfolio .call-to-action p */
+    color: white;
+}
+
+/* Qualidade */
+
+.qualidade {
+    padding: 60px 0;
+}
+
+.qualidade::after {
+    content: "";
+    width: 634px;
+    height: 83px;
+    display: block;
+    background: url("../img/linhas.png") no-repeat center;
+    position: absolute;
+    top: 209px;
+    right: 162px;
+    z-index: -1;
+}
+
+.qualidade img {
+    margin: 0 auto;
+    display: block;
+}
+
+.qualidade-lista {
+    padding-top: 20px;
+    overflow: auto;  /* clear-fix: qualidade-lista estava em cima da quebra na página sobre (hidden tb serve) */
+}
+
+.qualidade-lista li {
+    text-align: center;
+    padding: 0 40px;
+}
+
+.qualidade-lista li h3 {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: .1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.qualidade-lista li h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px auto;
+    background: black;
+}
+
+/* Quebra */
+
+.quebra {
+    width: 100%;
+    height: 220px;
+    text-align: center;
+    padding-top: 40px;
+    background: url("../img/bg-footer.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.quebra .quote-externo {
+    max-width: 400px;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer h3 {
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fec63e;
+}
+
+.footer h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px 0 12px 0;
+    background: #fec63e;
+}
+
+.footer-historia {
+    padding-right: 40px;
+}
+
+.footer-contato ul li {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.footer-redes-sociais ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-redes-sociais ul li a {
+    padding: 10px;
+    border: 3px solid #fec63e;
+    display: block;
+}
+
+.footer-redes-sociais ul li a:hover {
+    border-color: white;
+}
+
+.copyright {
+    width: 100%;
+    padding: 20px 0;
+    background: #fec63e;
+}

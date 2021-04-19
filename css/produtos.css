@@ -78,7 +78,7 @@
 .orcamento {
     width: 100%;
     margin-top: 60px;
-    padding: 40px;
+    padding: 40px 0;
     background: black;
 }
 
@@ -159,7 +159,7 @@
 }
 
 .orcamento-dados ul {
-    padding-right: 80px;
+    padding-right: 60px;
 }
 
 .orcamento-dados ul li {
@@ -173,5 +173,5 @@
 }
 
 .orcamento-dados p {
-    margin: 8px;
+    margin: 8px 0;
 }

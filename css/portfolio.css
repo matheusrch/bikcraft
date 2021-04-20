@@ -24,3 +24,61 @@
     font-style: normal;
     float: right;
 }
+
+/* Plugin de slide */
+
+.rslides, .rslides-portfolio {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li, .rslides-portfolio li {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child, .rslides-portfolio li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img, .rslides-portfolio img {
+    display: block;
+    height: auto;
+    width: 100%;
+    border: 0;
+}
+
+.rslides_tabs {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.rslides_tabs li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.rslides_tabs li a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    background: #1d1d1d;
+    overflow: hidden;
+    text-indent: -200px;
+}
+
+.rslides_tabs .rslides_here a {
+    background: #fec63e;
+}

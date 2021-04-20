@@ -102,6 +102,7 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     color: #fec63e;
+    transition: all .5s ease;
 }
 
 .btn:hover {
@@ -147,6 +148,7 @@ img {
     font-weight: bold;
     text-transform: uppercase;
     color: black;
+    transition: all .3s ease;
 }
 
 .header-menu ul li a:hover {
@@ -264,7 +266,7 @@ img {
     background: #fec63e;
 }
 
-.portfolio-lista li:last-child {
+.portfolio-lista div:last-of-type {
     margin-top: 20px;
 }
 
@@ -383,6 +385,7 @@ img {
     padding: 10px;
     border: 3px solid #fec63e;
     display: block;
+    transition: all .5s ease;
 }
 
 .footer-redes-sociais ul li a:hover {
@@ -393,4 +396,50 @@ img {
     width: 100%;
     padding: 20px 0;
     background: #fec63e;
+}
+
+/* Animações */
+
+.js .intro h1, .js .intro blockquote, .js .intro .btn, .js .animar, .js .animar-interno, .js .intro-interna h1, .js .intro-interna p {
+    opacity: 0;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -40px, 0);
+        transform: translate3d(0, -40px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -40px, 0);
+        transform: translate3d(0, -40px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
 }

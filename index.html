@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/grid.css">  <!-- E por fim ajuda no grid -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsivo.css">
+    <script src="js/libs/modernizr.custom.45655.js"></script>
 </head>
 <body>
     <header class="header">
@@ -38,7 +39,7 @@
         </div>
     </section>
 
-    <section class="container produtos">
+    <section class="container produtos animar">
         <h2 class="subtitulo">Produtos</h2>
         <ul class="produtos-lista">
             <li class="grid-1-3">
@@ -72,11 +73,11 @@
     <section class="portfolio">
         <div class="container">
             <h2 class="subtitulo">Portfólio</h2>
-            <ul class="portfolio-lista">
-                <li class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></li>
-                <li class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></li>
-                <li class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></li>
-            </ul>
+            <div class="portfolio-lista">
+                <div class="grid-8"><img src="img/portfolio/retro.jpg" alt="Bicicleta Retro"></div>
+                <div class="grid-8"><img src="img/portfolio/passeio.jpg" alt="Bicicleta Passeio"></div>
+                <div class="grid-16"><img src="img/portfolio/esporte.jpg" alt="Bicicleta Esporte"></div>
+            </div>
             <div class="call-to-action">
                 <p>Conheça mais o nosso portfólio</p>
                 <a href="portfolio.html" class="btn">Portfólio</a>
@@ -151,5 +152,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>                        essas duas linhas -->
+    <!-- <script>window.jQuery || document.write('<script src="js/libs/jquery-1.11.2.min.js"><\/script>')</script>  deixaram o site mais lento -->
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

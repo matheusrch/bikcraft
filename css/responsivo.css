@@ -2,18 +2,6 @@
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
-	/* Intro */
-
-	.intro {
-		margin-top: 77px;
-	}
-
-	/* Intro interna */
-
-	.intro-interna {
-		margin-top: 77px;
-	}
-
 	/* Qualidade (Home) */
 
 	.qualidade::after {

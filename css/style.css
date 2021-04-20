@@ -125,6 +125,10 @@ img {
     background: #fec63e;
 }
 
+.header img {
+    max-width: fit-content;
+}
+
 .header-menu {
     text-align: right;
 }

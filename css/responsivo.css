@@ -90,8 +90,8 @@
 	.intro {
 		margin-top: 0px;
 		padding-top: 50px;
-		/* background: url("../img/bg-mobile.jpg") no-repeat center;
-		background-size: cover; */
+		background: url("../img/bg-mobile.jpg") no-repeat center;
+		background-size: cover;
 	}
 
 	.intro h1 {

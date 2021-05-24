@@ -1,0 +1,31 @@
+.interna-sobre {
+    background: url("../img/bg-sobre.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.missao-sobre {
+    padding-top: 60px;
+}
+
+.missao-sobre p {
+    @include tipo-1(18);
+    margin-bottom: 1em;
+    padding-right: 60px;
+    @include responsivo(mobile) {
+        @include tipo-1(14);
+		padding-right: 0px;
+    }
+}
+
+.missao-sobre ul li {
+    @include tipo-2(18);
+    line-height: 30px;
+    @include responsivo(mobile) {
+        @include tipo-1(14);
+		line-height: 25px;
+    }
+}
+
+.foto-equipe {
+    padding-top: 20px;
+}

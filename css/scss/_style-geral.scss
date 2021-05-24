@@ -5,9 +5,7 @@ body {
 }
 
 p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-    line-height: 20px;
+    @include tipo-2(14);
 }
 
 img {
@@ -20,8 +18,7 @@ img {
 }
 
 #form-erro span, #form-send span  {
-	font-size: 18px;
-	line-height: 25px;
+	@include tipo-1(18);
 	margin-bottom: 10px;
 	display: block;
 }
@@ -38,7 +35,7 @@ img {
     max-width: 320px;
     margin: 0 auto;
     margin-bottom: 40px;
-    color: white;
+    color: $branco;
 }
 
 .quote-externo p {
@@ -51,11 +48,11 @@ img {
     width: 60px;
     height: 3px;
     margin: 14px auto 10px auto;
-    background: white;
+    background: $branco;
 }
 
 .quote-externo cite {
-    font-size: 14px;
+    @include tipo-1(14);
     letter-spacing: .1em;
     font-style: normal;
     font-weight: bold;
@@ -63,14 +60,13 @@ img {
 }
 
 .subtitulo {
-    font-size: 24px;
-    line-height: 30px;
+    @include tipo-1(24);
     letter-spacing: .1em;
     margin-bottom: 40px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    color: black;
+    color: $preto;
 }
 
 .subtitulo::after {
@@ -79,17 +75,16 @@ img {
     width: 60px;
     height: 3px;
     margin: 8px auto;
-    background: black;
+    background: $preto;
 }
 
 .subtitulo-interno {
-    font-size: 24px;
-    line-height: 30px;
+    @include tipo-1(24);
     letter-spacing: .1em;
     margin-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    color: black;
+    color: $preto;
 }
 
 .subtitulo-interno::after {
@@ -98,13 +93,16 @@ img {
     width: 60px;
     height: 3px;
     margin: 8px 0;
-    background: black;
+    background: $preto;
 }
 
 .call-to-action {
     padding-top: 40px;
     text-align: center;
     clear: both;
+    @include responsivo(mobile) {
+        padding-top: 10px;
+    }
 }
 
 .call-to-action p {
@@ -113,25 +111,24 @@ img {
 }
 
 .btn {
-    border: 3px solid #fec63e;
+    border: 3px solid $cor-primaria;
     padding: 10px 30px;
-    font-size: 14px;
-    line-height: 20px;
+    @include tipo-1(14);
     letter-spacing: .1em;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fec63e;
+    color: $cor-primaria;
     transition: all .5s ease;
 }
 
 .btn:hover {
-    border-color: white;
-    color: white;
+    border-color: $branco;
+    color: $branco;
 }
 
 .btn-preto:hover {  /* ou .btn.btn-preto:hover */
-    border-color: black;
-    color: black;
+    border-color: $preto;
+    color: $preto;
 }
 
 /* Header */
@@ -142,40 +139,58 @@ img {
     position: fixed;
     top: 0;
     z-index: 10;
-    background: #fec63e;
+    background: $cor-primaria;
+    @include responsivo(mobile) {
+        position: relative;
+		padding-bottom: 0px;
+    }
 }
 
 .header img {
     max-width: fit-content;
+    @include responsivo(mobile) {
+        margin: 0 auto 10px auto;
+        // display: none;
+    }
 }
 
 .header-menu {
     text-align: right;
+    @include responsivo(mobile) {
+        text-align: center;
+    }
 }
 
 .header-menu ul li {
     display: inline-block;
     margin-left: 25px;
     margin-top: 20px;
+    @include responsivo(mobile) {
+        margin: 5px;
+    }
 }
 
 .header-menu ul li a {
-    font-size: 14px;
-    line-height: 20px;
+    @include tipo-1(14);
     letter-spacing: .1em;
     padding: 10px 0;
     font-weight: bold;
     text-transform: uppercase;
-    color: black;
+    color: $preto;
     transition: all .3s ease;
-}
-
-.header-menu ul li a:hover {
-    color: white;
-}
-
-.header-menu ul li a.menu-ativo {
-    color: white;
+    @include responsivo(mobile) {
+        border: 4px solid $preto;
+		width: 136px;
+		display: block;
+		float: left;
+    }
+    &:hover, &.menu-ativo {
+        color: $branco;
+        @include responsivo(mobile) {
+            border-color: $branco;
+        }
+    }
+    
 }
 
 /* Intro */
@@ -188,13 +203,22 @@ img {
     padding-top: 80px;
     background: url("../img/bg.jpg") no-repeat center;
     background-size: cover;
+    @include responsivo(mobile) {
+        margin-top: 0px;
+		padding-top: 50px;
+		background: url("../img/bg-mobile.jpg") no-repeat center;
+		background-size: cover;
+    }
 }
 
 .intro h1 {
-    font-size: 48px;
+    @include tipo-1(48);
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color: $branco;
+    @include responsivo(mobile) {
+        @include tipo-1(36);
+    }
 }
 
 /* Intro interna */
@@ -205,11 +229,14 @@ img {
     height: 160px;
     text-align: center;
     padding-top: 40px;
-    color: white;
+    color: $branco;
+    @include responsivo(mobile) {
+        margin-top: 0px;
+    }
 }
 
 .intro-interna h1 {
-    font-size: 36px;
+    @include tipo-1(36);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -220,7 +247,7 @@ img {
     width: 60px;
     height: 3px;
     margin: 6px auto 10px auto;
-    background: white;
+    background: $branco;
 }
 
 .intro-interna p {
@@ -235,7 +262,7 @@ img {
 
 .produtos-lista li {
     text-align: center;
-    background: #fec63e;
+    background: $cor-primaria;
 }
 
 .produtos-lista img {
@@ -243,8 +270,7 @@ img {
 }
 
 .produtos-lista li h3 {
-    font-size: 18px;
-    line-height: 25px;
+    @include tipo-1(18);
     letter-spacing: .1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -257,7 +283,7 @@ img {
     width: 60px;
     height: 3px;
     margin: 2px auto;
-    background: black;
+    background: $preto;
 }
 
 .produtos-lista li p {
@@ -266,7 +292,7 @@ img {
 
 .produtos-icone {
     padding: 20px;
-    background: black;
+    background: $preto;
 }
 
 /* Portfolio */
@@ -274,15 +300,15 @@ img {
 .portfolio {
     width: 100%;
     padding: 60px 0;
-    background: black;
+    background: $preto;
 }
 
 .portfolio .subtitulo {
-    color: #fec63e;
+    color: $cor-primaria;
 }
 
 .portfolio .subtitulo::after {
-    background: #fec63e;
+    background: $cor-primaria;
 }
 
 .portfolio-lista div:last-of-type {
@@ -290,7 +316,7 @@ img {
 }
 
 .portfolio p {  /* ou .portfolio .call-to-action p */
-    color: white;
+    color: $branco;
 }
 
 /* Qualidade */
@@ -309,6 +335,12 @@ img {
     top: 209px;
     right: 162px;
     z-index: -1;
+    @include responsivo(tablet) {
+        right: 66px;
+    }
+    @include responsivo(mobile) {
+        display: none;
+    }
 }
 
 .qualidade img {
@@ -323,11 +355,13 @@ img {
 .qualidade-lista li {
     text-align: center;
     padding: 0 40px;
+    @include responsivo(tablet) {
+        padding: 0 10px;
+    }
 }
 
 .qualidade-lista li h3 {
-    font-size: 18px;
-    line-height: 25px;
+    @include tipo-1(18);
     letter-spacing: .1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -340,7 +374,7 @@ img {
     width: 60px;
     height: 3px;
     margin: 6px auto;
-    background: black;
+    background: $preto;
 }
 
 /* Quebra */
@@ -362,18 +396,17 @@ img {
 
 .footer {
     width: 100%;
-    background: black;
-    color: white;
+    background: $preto;
+    color: $branco;
     padding: 20px 0;
 }
 
 .footer h3 {
-    font-size: 18px;
-    line-height: 25px;
+    @include tipo-1(18);
     letter-spacing: .1em;
     text-transform: uppercase;
     font-weight: bold;
-    color: #fec63e;
+    color: $cor-primaria;
 }
 
 .footer h3::after {
@@ -382,7 +415,7 @@ img {
     width: 60px;
     height: 3px;
     margin: 6px 0 12px 0;
-    background: #fec63e;
+    background: $cor-primaria;
 }
 
 .footer-historia {
@@ -390,9 +423,7 @@ img {
 }
 
 .footer-contato ul li {
-    font-size: 14px;
-    line-height: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    @include tipo-2(14);
 }
 
 .footer-redes-sociais ul li {
@@ -402,19 +433,29 @@ img {
 
 .footer-redes-sociais ul li a {
     padding: 10px;
-    border: 3px solid #fec63e;
+    border: 3px solid $cor-primaria;
     display: block;
     transition: all .5s ease;
+    @include responsivo(tablet) {
+        padding: 6px;
+    }
 }
 
 .footer-redes-sociais ul li a:hover {
-    border-color: white;
+    border-color: $branco;
+}
+
+.footer-redes-sociais ul li a img {
+    @include responsivo(tablet) {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 .copyright {
     width: 100%;
     padding: 20px 0;
-    background: #fec63e;
+    background: $cor-primaria;
 }
 
 /* Animações */

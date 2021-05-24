@@ -1,0 +1,208 @@
+/* Produtos */
+
+.interna-produtos {
+    background: url("../img/bg-produtos.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.produto-item {
+    padding-top: 60px;
+}
+
+.produto-item h2 {
+    @include tipo-1(36);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    position: relative;
+    top: -180px;
+    text-align: center;
+    margin-bottom: -56px;
+    color: $branco;
+    @include responsivo(tablet) {
+        top: -150px;
+        margin-bottom: -56px;
+    }
+    @include responsivo(mobile) {
+        top: -100px;
+		margin-bottom: -68px;
+    }
+}
+
+.produto-item h2::before, .produto-item h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 6px auto 8px auto;
+    background: $branco;
+}
+
+.produto-icone {
+    padding: 70px 0;
+    background: $preto;
+    @include responsivo(tablet) {
+        padding: 41px 0;
+    }
+    @include responsivo(mobile) {
+        padding: 41px 0;
+    }
+}
+
+.produto-icone img {
+    margin: 0 auto;
+    display: block;
+}
+
+.produto-info {
+    background: $preto;
+}
+
+.produto-info p {
+    @include tipo-1(18);
+    height: 180px;
+    padding: 30px 40px;
+    color: $branco;
+    @include responsivo(tablet) {
+        @include tipo-1(14);
+		padding: 20px 30px;
+		height: 122px;
+    }
+    @include responsivo(mobile) {
+        @include tipo-1(14);
+		padding: 20px 30px;
+		height: auto;
+    }
+}
+
+.produto-info ul li {
+    @include tipo-1(18);
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background: $cor-primaria;
+    float: left;
+    width: 229px;
+    height: 49px;
+    padding-top: 16px;
+    @include responsivo(tablet) {
+        width: 181px;
+    }
+    @include responsivo(mobile) {
+        width: 149px;
+		@include tipo-1(14);
+		padding-top: 14px;
+    }
+}
+
+.produto-info ul li:nth-child(1), .produto-info ul li:nth-child(2) {
+    margin-bottom: 2px;
+}
+
+.produto-info ul li:nth-child(even) {
+    margin-left: 2px;
+}
+
+/* Orçamento */
+
+.orcamento {
+    width: 100%;
+    margin-top: 60px;
+    padding: 40px 0;
+    background: $preto;
+}
+
+.orcamento h2 {
+    color: $cor-primaria;
+}
+
+.orcamento h2::after {
+    background: $cor-primaria;
+}
+
+.form {
+    padding-right: 60px;
+    @include responsivo(mobile) {
+        padding-right: 0px;
+    }
+}
+
+.form label {
+    display: block;
+    margin-bottom: 4px;
+    color: $branco;
+    @include tipo-2(18);
+}
+
+.form input {
+    width: 100%;
+    border: 4px solid $cor-primaria;
+    color: $branco;
+    background: none;
+    outline: none;
+    display: block;
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    @include tipo-2(14);
+}
+
+.form textarea {
+    width: 100%;
+    height: 120px;
+    border: 4px solid $cor-primaria;
+    color: $branco;
+    background: none;
+    outline: none;
+    display: block;
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    resize: none;
+    @include tipo-2(14);
+}
+
+.form button {
+    padding: 7px 40px;
+    background: none;
+}
+
+.orcamento-dados {
+    color: $branco;
+}
+
+.orcamento-dados h3 {
+    @include tipo-1(18);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $cor-primaria;
+}
+
+.orcamento-dados span {
+    display: block;
+    @include tipo-2(18);
+    line-height: 30px;
+}
+
+.orcamento-dados span:nth-of-type(2) {
+    margin-bottom: 40px;
+}
+
+.orcamento-dados ul {
+    padding-right: 60px;
+    @include responsivo(mobile) {
+        padding-right: 0px;
+    }
+}
+
+.orcamento-dados ul li {
+    padding: 10px 15px;
+    @include tipo-2(14);
+}
+
+.orcamento-dados ul li:nth-child(odd) {
+    background: #1d1d1d;
+}
+
+.orcamento-dados p {
+    margin: 8px 0;
+}
